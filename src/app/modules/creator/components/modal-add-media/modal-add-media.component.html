@@ -1,0 +1,44 @@
+<tds-tabset class="bg-white dark:bg-d-neutral-3-200 p-4" tabPosition="left" [clsTab]="'flex'"
+  [tabBarStyle]="{'align-items': 'flex-start'}">
+  <tds-tab [title]="image" clsContent="w-full h-full p-4 -mt-px ">
+    <ng-template #image let-active="active">
+      <div class="min-w-[200px] flex items-center font-semibold rounded-lg cursor-pointer text-body-2 px-4 py-3 mb-1 relative group"
+        [ngClass]='{" text-primary-1 bg-primary-3":active,"text-neutral-1-600 dark:text-d-neutral-1-400 hover:text-primary-1 hover:bg-primary-3":!active}'>
+        Hình ảnh
+      </div>
+    </ng-template>
+    123
+  </tds-tab>
+  <tds-tab [title]="gif" clsContent="w-full h-full p-4 -mt-px">
+    <ng-template #gif let-active="active">
+      <div class="flex items-center font-semibold rounded-lg cursor-pointer text-body-2 px-4 py-3 mb-1 relative group"
+        [ngClass]='{" text-primary-1 bg-primary-3":active,"text-neutral-1-600 dark:text-d-neutral-1-400 hover:text-primary-1 hover:bg-primary-3":!active}'>
+        Gif
+      </div>
+    </ng-template>
+  </tds-tab>
+  <tds-tab [title]="video" clsContent="w-full h-full p-4 -mt-px">
+    <ng-template #video let-active="active">
+      <div class="flex items-center font-semibold rounded-lg cursor-pointer text-body-2 px-4 py-3 mb-1 relative group"
+        [ngClass]='{" text-primary-1 bg-primary-3":active,"text-neutral-1-600 dark:text-d-neutral-1-400 hover:text-primary-1 hover:bg-primary-3":!active}'>
+        Video
+      </div>
+    </ng-template>
+  </tds-tab>
+  <tds-tab [title]="audio" clsContent="w-full h-full p-4 -mt-px">
+    <ng-template #audio let-active="active">
+      <div class="flex items-center font-semibold rounded-lg cursor-pointer text-body-2 px-4 py-3 mb-1 relative group"
+        [ngClass]='{" text-primary-1 bg-primary-3":active,"text-neutral-1-600 dark:text-d-neutral-1-400 hover:text-primary-1 hover:bg-primary-3":!active}'>
+        Audio
+      </div>
+    </ng-template>
+  </tds-tab>
+</tds-tabset>
+<div  class="flex justify-end items-center gap-6">
+  <button tds-button-custom class="tds-button-secondary min-w-[218px]">
+    <span class="flex h-full justify-center items-center text-header-1">Hủy</span>
+  </button>
+  <button  tds-button-custom class="tds-button-primary min-w-[218px]">
+    <span class="flex h-full justify-center items-center text-header-1">Vào game</span>
+  </button>
+</div>
