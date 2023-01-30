@@ -10,54 +10,71 @@ import { TDSSafeAny } from 'tds-ui/shared/utility';
 export class DashboardComponent implements OnInit {
 
   visible?: boolean;
-  isClick=false;
-  lstReport =  [
+  isClick = false;
+  lstReport = [
     {
       name: "Trò chơi thứ nhất",
       image: "../assets/images/home/rubik.svg",
       users: 10,
+      lstUser: [{
+        id: 1, img: '../assets/images/home/gold-class.svg', class: 1
+      },
+      {
+        id: 2, img: '../assets/images/home/silve-class.svg', class: 2
+      },
+      {
+        id: 3, img: '../assets/images/home/bronze-class.svg', class: 3
+      }
+      ],
       setDay: new Date()
     },
     {
       name: "Trò chơi thứ hai",
       image: "../assets/images/home/victory.svg",
       users: 0,
+      lstUser: [],
       setDay: new Date()
     },
     {
       name: "Trò chơi thứ ba",
       image: "../assets/images/home/rubik.svg",
       users: 10,
+      lstUser: [],
       setDay: new Date()
     },
     {
       name: "Trò chơi thứ tư",
       image: "../assets/images/home/victory.svg",
       users: 0,
+      lstUser: [],
       setDay: new Date()
     },
     {
       name: "Trò chơi thứ tư",
       image: "../assets/images/home/victory.svg",
       users: 0,
+      lstUser: [],
       setDay: new Date()
     },
     {
       name: "Trò chơi thứ tư",
       image: "../assets/images/home/victory.svg",
       users: 0,
+      lstUser: [],
       setDay: new Date()
     },
     {
       name: "Trò chơi thứ tư",
       image: "../assets/images/home/victory.svg",
       users: 0,
+      lstUser: [],
       setDay: new Date()
     },
     {
       name: "Trò chơi thứ tư",
       image: "../assets/images/home/victory.svg",
       users: 0,
+      lstUser: [],
       setDay: new Date()
     }
   ]
@@ -109,7 +126,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  close(e:TDSSafeAny) {
+  close(e: TDSSafeAny) {
     console.log(e)
   }
 
