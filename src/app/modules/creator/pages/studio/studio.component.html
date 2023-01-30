@@ -22,7 +22,7 @@
         <div class="text-[22px] font-medium text-tertiary-3">Tiêu đề game</div>
         <input tdsInput class="w-full h-[60px] !bg-tertiary-4 rounded-xl" type="text">
       </div>
-      <tmt-ghub-question *ngFor="let question of lstQuestion;" [numberQuestion]="question+1" (event)="addMedia()"></tmt-ghub-question>
+      <tmt-ghub-question *ngFor="let question of lstQuestion;" [numberQuestion]="question+1" (event)="addMedia()" (settingEvent)="handleSetting()"></tmt-ghub-question>
       <span>
         <button (click)="addQuestion()" tds-button-custom class="tds-button-primary min-w-[164px] ">
           <span class="flex h-full justify-center font-semibold items-center text-header-1 gap-2.5 "> <i

@@ -3,10 +3,20 @@
     <div class=" flex items-center justify-center  p-2 bg-secondary-1 w-6 h-6 rounded-full">
       <span class="text-white font-semibold  text-end">{{numberQuestion}}</span>
     </div>
-    <button (click)="addMedia()" tds-button-flat-icon color="custom" class="text-tertiary-5 hover:text-tertiary-3 ring-primary-1/20 bg-white hover:bg-tertiary-4
+    <button  tds-button-flat-icon color="custom" tds-dropdown [tdsDropdownMenu]="menu" class="text-tertiary-5 hover:text-tertiary-3 ring-primary-1/20 bg-white hover:bg-tertiary-4
     focus:bg-tertiary-4 focus:border-primary-1" size="xl">
       <i class="tdsi-three-dots-vertical-fill"></i>
     </button>
+    <tds-dropdown-menu #menu="tdsDropdownMenu">
+      <div class="w-full py-0.5">
+        <div (click)="addMedia()" tds-dropdown-item>
+          <a> Thêm tiện ích </a>
+        </div>
+        <div (click)="settingMedia()" tds-dropdown-item>
+          <a> Cài đặt</a>
+        </div>
+      </div>
+    </tds-dropdown-menu>
   </div>
   <div class="flex flex-col items-start w-full border-b border-secondary-3 pb-7 mb-7">
     <div class="text-base leading-5 font-medium text-tertiary-3">Câu hỏi {{numberQuestion}}</div>

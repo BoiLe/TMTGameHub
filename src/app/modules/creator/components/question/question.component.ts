@@ -9,6 +9,7 @@ export class QuestionComponent implements OnInit {
 
   @Input() numberQuestion: number = 0;
   @Output() event = new EventEmitter<void>();
+  @Output() settingEvent = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit(): void {
@@ -16,5 +17,9 @@ export class QuestionComponent implements OnInit {
 
   addMedia() {
     this.event.emit();
+  }
+
+  settingMedia() {
+    this.settingEvent.emit();
   }
 }

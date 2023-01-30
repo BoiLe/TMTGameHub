@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TDSSafeAny } from 'tds-ui/shared/utility';
 
 @Component({
   selector: 'tmt-ghub-dashboard',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   host: { class: "flex flex-col overflow-hidden w-full h-full" }
 })
 export class DashboardComponent implements OnInit {
+
+  visible?: boolean;
+  isClick=false;
   lstReport =  [
     {
       name: "Trò chơi thứ nhất",
@@ -105,4 +109,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  close(e:TDSSafeAny) {
+    console.log(e)
+  }
+
+  change(value: boolean): void {
+    console.log(value);
+  }
 }

@@ -21,6 +21,16 @@ import { TDSMessageService } from 'tds-ui/message';
 import { TDSModalModule } from 'tds-ui/modal';
 import { QuestionComponent } from './components/question/question.component';
 import { TDSTabsModule } from 'tds-ui/tabs';
+import { TDSDividerModule } from 'tds-ui/divider';
+import { TDSEmptyModule } from 'tds-ui/empty';
+import { TabMediaComponent } from './components/tab-media/tab-media.component';
+import { TDSPopoverModule } from 'tds-ui/popover';
+import { TDSUploadModule } from 'tds-ui/upload';
+import { HttpClientModule } from '@angular/common/http';
+import { MediaComponent } from './components/media/media.component';
+import { TDSCheckBoxModule } from 'tds-ui/tds-checkbox';
+import { SettingComponent } from './components/setting/setting.component';
+import { TDSSelectModule } from 'tds-ui/select';
 
 
 
@@ -34,7 +44,10 @@ import { TDSTabsModule } from 'tds-ui/tabs';
     ModalAddMediaComponent,
     GameComponent,
     ReportLastestComponent,
-    QuestionComponent
+    QuestionComponent,
+    TabMediaComponent,
+    MediaComponent,
+    SettingComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +60,14 @@ import { TDSTabsModule } from 'tds-ui/tabs';
     TDSButtonModule,
     TDSBreadCrumbModule,
     TDSModalModule,
-    TDSTabsModule
+    TDSTabsModule,
+    TDSDividerModule,
+    TDSEmptyModule,
+    TDSPopoverModule,
+    TDSUploadModule,
+    HttpClientModule,
+    TDSCheckBoxModule,
+    TDSSelectModule
   ],
   providers:[
     TDSMessageService

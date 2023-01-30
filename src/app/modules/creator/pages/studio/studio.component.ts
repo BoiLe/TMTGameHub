@@ -1,13 +1,14 @@
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 import { TDSModalRef, TDSModalService } from 'tds-ui/modal';
 import { ModalAcceptCreateGameComponent } from '../../components/modal-accept-create-game/modal-accept-create-game.component';
 import { ModalAddMediaComponent } from '../../components/modal-add-media/modal-add-media.component';
+import { SettingComponent } from '../../components/setting/setting.component';
 
 @Component({
   selector: 'tmt-ghub-studio',
   templateUrl: './studio.component.html',
   styleUrls: ['./studio.component.scss'],
-  host: { class: "flex flex-col overflow-hidden w-full h-full" }
+  host: { class: "flex flex-col overflow-hidden w-full h-full" },
 })
 export class StudioComponent implements OnInit {
 
@@ -24,24 +25,38 @@ export class StudioComponent implements OnInit {
   createGame() {
     const modal = this.modalService.create({
       title: "",
-      size: "md",
-      width: "768px",
+      // size: undefined,
+      width: 768,
       content: ModalAcceptCreateGameComponent,
       footer: null,
       viewContainerRef: this.viewContainerRef,
       componentParams: {
-      }
+      },
     });
   }
 
   addMedia() {
     const modal = this.modalService.create({
       title: "",
+      footer: null,
       size: "xl",
       content: ModalAddMediaComponent,
       viewContainerRef: this.viewContainerRef,
       componentParams: {
-      }
+      },
+      bodyStyle:  {'padding' : '0'}
+    });
+  }
+  handleSetting() {
+    const modal = this.modalService.create({
+      title: "Cài đặt",
+      size: "md",
+      footer: null,
+      content: SettingComponent,
+      viewContainerRef: this.viewContainerRef,
+      componentParams: {
+      },
+      className: 'font-Montserrat'
     });
   }
 
