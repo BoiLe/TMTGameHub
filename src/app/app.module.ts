@@ -9,11 +9,14 @@ import localeVi from '@angular/common/locales/vi';
 import { registerLocaleData } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+import { LayoutComponent } from './share/layout/layout.component';
 // Thiết lập tiếng Việt
 registerLocaleData(localeVi);
 @NgModule({
   declarations: [
     AppComponent,
+    LayoutComponent,
+
   ],
   imports: [
     BrowserModule,

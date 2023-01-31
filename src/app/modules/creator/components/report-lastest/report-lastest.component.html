@@ -1,4 +1,4 @@
-<div popoverPlacement="bottomRight" tds-popover  [popoverAutoClose]=false [popoverVisible]="visible" 
+<div popoverPlacement="bottomRight" tds-popover  [popoverAutoClose]=true [(popoverVisible)]="visible"
   popoverTrigger="click" [popoverContent]="contentTemplate1"
   class="flex justify-between items-center p-3 border border-neutral-2-200 rounded-lg ">
   <div class="flex items-center gap-3 ">
@@ -19,7 +19,7 @@
   </div>
 </div>
 <ng-template #contentTemplate1>
-  <div class="flex flex-col pt-3 px-4 pb-4 min-w-[380px]">
+  <div  *ngIf="lstUser.length > 0" class="flex flex-col pt-3 px-4 pb-4 min-w-[380px] font-Montserrat">
     <div class="text-body-1 font-semibold text-neutral-1-900 mb-3">Danh sách người tham gia</div>
     <div *ngFor="let user of lstUser;" class="flex items-start gap-3 py-3 ">
       <picture>

@@ -24,6 +24,6 @@ export class ReportLastestComponent implements OnInit {
   }
 
   close() {
-    this.visible =false;
+    this.visible = false;
   }
 }
